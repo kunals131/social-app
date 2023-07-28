@@ -15,10 +15,10 @@ const Navigation = () => {
   return (
     <LayoutGroup id='a'>
     <nav className={styles.navigation}>
-        <NavigationIcon isActive={true} activeIcon={<HiHome size={24}/>} icon={<HiOutlineHome size={24}/>}/>
-        <NavigationIcon isActive={false} activeIcon={<HiBell size={24}/>} icon={<HiOutlineBell size={24}/>}/>
-        <NavigationIcon isActive={false} activeIcon={<HiHeart size={24}/>} icon={<HiOutlineHeart size={24}/>}/>
-        <NavigationIcon isActive={false} activeIcon={<HiUser size={24}/>} icon={<HiOutlineUser size={24}/>}/>
+        <NavigationIcon isActive={true} activeIcon={<HiHome  size={24}/>} icon={<HiOutlineHome size={24}/>}/>
+        <NavigationIcon isActive={false} activeIcon={<HiBell size={24}/>} icon={<HiOutlineBell strokeWidth={2} size={24}/>}/>
+        <NavigationIcon isActive={false} activeIcon={<HiHeart size={24}/>} icon={<HiOutlineHeart strokeWidth={2} size={24}/>}/>
+        <NavigationIcon isActive={false} activeIcon={<HiUser size={24}/>} icon={<HiOutlineUser strokeWidth={2} size={24}/>}/>
     </nav>
     </LayoutGroup>
   )

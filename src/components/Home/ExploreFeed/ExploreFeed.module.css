@@ -1,0 +1,35 @@
+.exploreFeed {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.exploreFeed_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.exploreFeed_header_title {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.exploreFeed_header_actionURL {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.exploreFeed_gallary {
+  margin-top: 1rem;
+}
+
+.exploreFeed_gallary img {
+  border-radius: 0.75rem;
+}
