@@ -1,0 +1,45 @@
+.header {
+   padding: 1.8rem 3rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.header_left_logo_img {
+    width: 42px;
+    height: 42px;
+}
+
+.header_left_search input {
+    background-color: #e2e8f0;
+    outline: none;
+    appearance: none;
+    border-radius: 12px;
+    padding: 0.6rem 0.8rem;
+    border: none;
+    width: 200px;
+}
+
+.header_left_search input::placeholder {
+    font-size: 0.8rem;
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+
+.header_center {
+    flex: 1;
+}
+
+.header_right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

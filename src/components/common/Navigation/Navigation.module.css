@@ -1,0 +1,32 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.navigation_icon {
+    cursor: pointer;
+    opacity: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+}
+.navigation_icon:hover {
+    opacity: 80%;
+    scale: 1.05;
+}
+.navigation_icon_active {
+    color: var(--primary-color);
+    opacity: 100%;
+    scale: 1.08;
+}
+.navigation_icon_activeIcon {
+    background-color: var(--primary-color);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+
+}
