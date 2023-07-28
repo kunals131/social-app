@@ -5,9 +5,12 @@ import { CoverPlaceholderURL, UserPlaceholderURL } from '@/utils/assets';
 const MyProfileCard = () => {
   return (
     <div className={styles.profileCard}>
-      <div style={{
-                background: `url(${CoverPlaceholderURL}) center center/cover`,
-              }} className={styles.profileCard_cover}>
+      <div
+        style={{
+          background: `url(${CoverPlaceholderURL}) center center/cover`,
+        }}
+        className={styles.profileCard_cover}
+      >
         <div className={styles.profileCard_cover_icon}>
           <HiEllipsisVertical />
         </div>
@@ -35,7 +38,8 @@ const MyProfileCard = () => {
         <div className={styles.profileCard_user_name}>Alex Leeds</div>
         <div className={styles.profileCard_user_id}>@alextab</div>
         <div className={styles.profileCard_user_desc}>
-          Hello I{"'"}m a photographer with great open ideas and awesome ready state⭐
+          Hello I{"'"}m a photographer with great open ideas and awesome ready
+          state⭐
         </div>
       </div>
       <div className={styles.profileCard_button_container}>

@@ -71,8 +71,8 @@
   height: 80px;
   width: 80px;
   box-shadow:
-  0 4px 6px -1px rgba(0, 0, 0, 0.1),
-  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,7 +109,7 @@
 .profileCard_user_desc {
   margin-top: 0.55rem;
   font-size: 0.75rem;
- 
+
   text-align: center;
 }
 
@@ -136,5 +136,5 @@
   background-color: #2f2e2e;
   color: white;
   cursor: pointer;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }

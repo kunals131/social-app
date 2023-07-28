@@ -1,5 +1,3 @@
-import MyProfileCard from "./MyProfileCard/MyProfileCard";
+import MyProfileCard from './MyProfileCard/MyProfileCard';
 
-export {
-    MyProfileCard
-}
+export { MyProfileCard };

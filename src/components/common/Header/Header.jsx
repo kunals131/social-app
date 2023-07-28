@@ -10,7 +10,11 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.header_left}>
         <div className={styles.header_left_logo}>
-          <Image alt='logo' src={LogoWEBP} className={styles.header_left_logo_img} />
+          <Image
+            alt="logo"
+            src={LogoWEBP}
+            className={styles.header_left_logo_img}
+          />
         </div>
         <div className={styles.header_left_search}>
           <input className="" placeholder="#Explore" />
@@ -20,7 +24,7 @@ const Header = () => {
         <Navigation />
       </div>
       <div className={styles.header_right}>
-        <ProfileSwitcher/>
+        <ProfileSwitcher />
       </div>
     </div>
   );

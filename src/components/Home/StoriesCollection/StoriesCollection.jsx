@@ -1,4 +1,3 @@
-import { UserPlaceholderURL } from '@/utils/assets';
 import React from 'react';
 import styles from './StoriesCollection.module.css';
 

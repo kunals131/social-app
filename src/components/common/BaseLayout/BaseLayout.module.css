@@ -1,6 +1,6 @@
 .layout {
-    padding: 4px 4.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+  padding: 4px 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

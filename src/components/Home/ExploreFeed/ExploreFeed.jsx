@@ -27,13 +27,19 @@ const ExploreFeed = () => {
           columnsCountBreakPoints={{ 1700: 3, 1400: 2, 450: 1, 4000: 4 }}
         >
           <Masonry gutter="12px">
-            {Images.map((project, i) => (
-              <div style={{ width: '100%' }}>
+            {Images.map((project, index) => (
+              <div key={index} style={{ width: '100%' }}>
+                <picture>
                 <img
                   src={project}
-                  className="rounded-xl"
-                  style={{ width: '100%', display: 'block' }}
+                  alt={`Image ${index}`}
+                  style={{
+                    borderRadius: '1rem',
+                    width: '100%',
+                    display: 'block',
+                  }}
                 />
+                </picture>
               </div>
             ))}
           </Masonry>

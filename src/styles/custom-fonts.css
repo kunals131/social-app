@@ -1,76 +1,74 @@
 @font-face {
-    font-family: Logo;
-    src: url('https://res.cloudinary.com/verved/raw/upload/v1653641768/Verved/primaryRegular_cfefsk.ttf');
-    font-weight: 200;
-  }
+  font-family: Logo;
+  src: url('https://res.cloudinary.com/verved/raw/upload/v1653641768/Verved/primaryRegular_cfefsk.ttf');
+  font-weight: 200;
+}
 @font-face {
-    font-family: Logo;
-    src: url('/static/fonts/primaryLight.ttf');
-    font-weight: 100;
-  }
-  @font-face {
-    font-family: Logo;
-    src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryMediumOBL_crn4xu.ttf');
-    font-weight: 300;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: Logo;
-    src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryMedium_tdlv2c.ttf');
-    font-weight: 300;
-  }
-  @font-face {
-    font-family: Logo;
-    src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryBold_jmeaoh.ttf');
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: Logo;
-    src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryBoldOpen_df6vzd.ttf');
-    font-weight: 500;
-  }
-
+  font-family: Logo;
+  src: url('/static/fonts/primaryLight.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: Logo;
+  src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryMediumOBL_crn4xu.ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: Logo;
+  src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryMedium_tdlv2c.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: Logo;
+  src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryBold_jmeaoh.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Logo;
+  src: url('https://res.cloudinary.com/verved/raw/upload/v1653641769/Verved/primaryBoldOpen_df6vzd.ttf');
+  font-weight: 500;
+}
 
 /* Sailec */
 
-  @font-face {
-    font-family: sailec;
-    src: url('/static/fonts/SailecBold.ttf');
-    font-weight: 500;
-  }
-  
-  @font-face {
-    font-family: sailec;
-    src: url('/static/fonts/SailecLight.ttf');
-    font-weight: 50;
-  }
-  
-  @font-face {
-    font-family: sailec;
-    src: url('/static/fonts/SailecMedium.ttf');
-    font-weight: 300;
-  }
-  
-  @font-face {
-    font-family: sailec;
-    src: url('/static/fonts/SailecRegularItalic.ttf');
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  @font-face {
-    font-family: sailec;
-    src: url('/static/fonts/SailecLight.ttf');
-    font-weight: 100;
-  }
-  @font-face {
-    font-family: sifonn;
-    src: url('/static/fonts/sifonn.ttf');
-    font-weight: 100;
-  }
-  @font-face {
-    font-family: battog;
-    src: url('/static/fonts/battog.ttf');
-    font-weight: 100;
-  }
-  
+@font-face {
+  font-family: sailec;
+  src: url('/static/fonts/SailecBold.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: sailec;
+  src: url('/static/fonts/SailecLight.ttf');
+  font-weight: 50;
+}
+
+@font-face {
+  font-family: sailec;
+  src: url('/static/fonts/SailecMedium.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: sailec;
+  src: url('/static/fonts/SailecRegularItalic.ttf');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: sailec;
+  src: url('/static/fonts/SailecLight.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: sifonn;
+  src: url('/static/fonts/sifonn.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: battog;
+  src: url('/static/fonts/battog.ttf');
+  font-weight: 100;
+}
