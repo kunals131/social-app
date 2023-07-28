@@ -18,7 +18,7 @@
 }
 
 .header_left_search input {
-    background-color: #e2e8f0;
+    background-color: var(--elevation-1);
     outline: none;
     appearance: none;
     border-radius: 12px;

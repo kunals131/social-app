@@ -8,10 +8,11 @@
   gap: 28px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  background-color: var(--elevation-1);
 }
 
 .profile_switcher:hover {
-  background-color: #f1f5f9;
+  background-color: var(--elevation-2);
 }
 
 .profile_switcher:hover .profile_switcher_info_img img {

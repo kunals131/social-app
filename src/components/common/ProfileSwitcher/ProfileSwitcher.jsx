@@ -8,7 +8,7 @@ const ProfileSwitcher = () => {
     <div className={styles.profile_switcher}>
         <div className={styles.profile_switcher_info}>
             <div className={styles.profile_switcher_info_img}>
-                <Image fill objectFit='cover' objectPosition='center' src={UserPlaceholderURL}/>
+                <Image alt='user-profile-image' fill objectFit='cover' objectPosition='center' src={UserPlaceholderURL}/>
             </div>
             <div className={styles.profile_switcher_info_name}>Evan leeds</div>
         </div>

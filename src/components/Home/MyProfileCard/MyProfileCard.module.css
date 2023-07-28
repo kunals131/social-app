@@ -1,0 +1,140 @@
+.profileCard {
+  border-radius: 1.5rem;
+  background-color: var(--elevation-2);
+}
+
+.profileCard_cover {
+  display: flex;
+  padding: 1.25rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  background-color: orange;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  height: 120px;
+}
+
+.profileCard_cover_icon {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  background-color: #26272b;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.profileCard_info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 1rem;
+  position: relative;
+  top: -30px;
+}
+
+.profileCard_info_stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.profileCard_info_stats_count {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.profileCard_info_stats_label {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  opacity: 0.6;
+}
+
+.profileCard_info_picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.profileCard_info_picture_container {
+  border-radius: 18%;
+  background-color: rgb(18, 18, 18);
+  height: 80px;
+  width: 80px;
+  box-shadow:
+  0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileCard_info_picture_container div {
+  border-radius: 18%;
+  width: 90%;
+  height: 90%;
+}
+
+.profileCard_user {
+  display: flex;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-top: -1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileCard_user_name {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.profileCard_user_id {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #818894;
+}
+
+.profileCard_user_desc {
+  margin-top: 0.55rem;
+  font-size: 0.75rem;
+ 
+  text-align: center;
+}
+
+.profileCard_button_container {
+  padding-left: 0.75rem;
+  margin-top: 1.3rem;
+  padding-right: 0.75rem;
+}
+
+.profileCard_button_container_inner {
+  padding-top: 0.75rem;
+  padding-bottom: 1rem;
+  border-top-width: 1px;
+  border-top: 1px solid rgba(255, 255, 255, 0.127);
+}
+
+.profileCard_button_container_inner button {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  text-align: center;
+  border: none;
+  background-color: #2f2e2e;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
+}
