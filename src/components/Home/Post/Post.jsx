@@ -7,6 +7,7 @@ import {
   HiOutlinePaperAirplane,
 } from 'react-icons/hi2';
 import styles from './Post.module.css';
+import Image from 'next/image';
 const Img1 =
   'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80';
 const Img2 =
@@ -44,22 +45,49 @@ const LikeCount = () => {
   );
 };
 
-const Post = () => {
+const Post = ({
+  urls,
+  alt_description,
+  //createdAt,
+  description,
+  // id,
+  // location,
+  user,
+  //likes,
+  blurHash,
+  // isLiked,
+}) => {
   return (
     <div className={styles.post}>
       <div className={styles.post_header}>
         <div className={styles.post_header_user}>
-          <div className={styles.post_header_user_img}></div>
+          <div className={styles.post_header_user_img_container}>
+            <Image
+              src={user.profile_image.medium}
+              alt={user.name}
+              fill
+              className={styles.post_header_user_img}
+            />
+          </div>
           <div>
-            <div className={styles.post_header_user_name}>Kunals13111</div>
+            <div className={styles.post_header_user_name}>{user.name}</div>
             <div className={styles.post_header_user_location}>
-              New York City, NY
+              @{user.username}
             </div>
           </div>
         </div>
         <BsThreeDots className={styles.post_header_menuIcon} size={20} />
       </div>
-      <div className={styles.post_img}></div>
+      <div className={styles.post_img_container}>
+        <Image
+          alt={alt_description || 'post_image'}
+          src={urls.regular}
+          fill={true}
+          className={styles.post_img}
+          placeholder="blur"
+          blurDataURL={blurHash}
+        />
+      </div>
       <div className={styles.post_actions_container}>
         <div className={styles.post_actions}>
           <HiOutlineHeart className={styles.post_action_icon} size={24} />
@@ -67,27 +95,25 @@ const Post = () => {
             className={styles.post_action_icon}
             size={24}
           />
-          <HiOutlinePaperAirplane style={{transform : 'rotate(-30deg)', position :'relative', top : '-2.5px'}} className={styles.post_action_icon} size={24} />
+          <HiOutlinePaperAirplane
+            style={{
+              transform: 'rotate(-30deg)',
+              position: 'relative',
+              top: '-2.5px',
+            }}
+            className={styles.post_action_icon}
+            size={24}
+          />
         </div>
         <HiOutlineBookmark size={24} />
       </div>
       <LikeCount />
       <div className={styles.post_text}>
-        kunals131{' '}
+        {user.username}{' '}
         <span style={{ fontWeight: 100 }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
-          sapiente...
+          {description ? description : alt_description}
         </span>
       </div>
-      {/* <div className='mt-5 pt-3 border-t  border-white/20 flex items-center gap-3'>
-        <div className='flex shrink-0 items-center justify-center rounded-2xl w-[45px] bg-[#393939] h-[45px]'>
-            <div className='w-[80%] h-[80%] rounded-xl bg-orange-400'></div>
-        </div>
-        <div className='relative w-full'>
-            <input placeholder='write a comment' className='w-full placeholder:text-sm rounded-lg px-3 py-2 bg-[#222222]'/>
-            <HiOutlineFaceSmile/>
-        </div>
-     </div> */}
     </div>
   );
 };

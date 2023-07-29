@@ -9,8 +9,15 @@ import {
   StoriesCollection,
   UsersSuggestion,
 } from '@/components/Home';
+import { getRandomPhotos } from '@/lib/unsplash/services';
+import { useFetchRandomPhotos } from '@/hooks/photos/useFetchRandomPhotos';
+import InfiniteScrollContainer from '@/components/common/InfiniteScrollContainer/InfiniteScrollContainer';
 
-const Home = () => {
+const Home = ({ initialLoadPhotos }) => {
+  const { photos, isFetchingNextPage, fetchNext, hasNextPage, isError } =
+    useFetchRandomPhotos({
+      initialData: initialLoadPhotos,
+    });
   return (
     <BaseLayout>
       <div className={styles.home}>
@@ -20,7 +27,14 @@ const Home = () => {
         </div>
         <div className={styles.home_center}>
           <StoriesCollection />
-          <PostsContainer />
+          <InfiniteScrollContainer
+            fetchMore={fetchNext}
+            hasMore={hasNextPage}
+            isError={isError}
+            isFetching={isFetchingNextPage}
+          >
+            <PostsContainer photos={photos} />
+          </InfiniteScrollContainer>
         </div>
         <div className={styles.home_right}>
           <Activity />
@@ -29,6 +43,20 @@ const Home = () => {
       </div>
     </BaseLayout>
   );
+};
+
+export const getServerSideProps = async () => {
+  try {
+    const result = await getRandomPhotos();
+
+    return {
+      props: {
+        initialLoadPhotos: result,
+      },
+    };
+  } catch (err) {
+    //return to a 500 error page
+  }
 };
 
 export default Home;
