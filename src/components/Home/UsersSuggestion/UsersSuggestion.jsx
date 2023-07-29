@@ -1,18 +1,25 @@
 import React from 'react';
 import styles from './UserSuggestion.module.css';
 import { HiOutlineUserPlus } from 'react-icons/hi2';
+import { UsersPlaceholderData } from '@/utils/data/static/UsersPlaceholderData';
+import Image from 'next/image';
 
-const UserCard = () => {
+const UserCard = ({ profileImage, name, username }) => {
   return (
     <div className={styles.user_suggestions_card}>
       <div className={styles.user_suggestions_card_info}>
-        <div className={styles.user_suggestions_card_info_img}></div>
+        <div className={styles.user_suggestions_card_info_img_container}>
+          <Image
+            src={profileImage}
+            alt={name}
+            fill
+            className={styles.user_suggestions_card_info_img}
+          />
+        </div>
         <div>
-          <div className={styles.user_suggestions_card_info_name}>
-            Umaid Rasial
-          </div>
+          <div className={styles.user_suggestions_card_info_name}>{name}</div>
           <div className={styles.user_suggestions_card_info_username}>
-            Followed by rest
+            @{username}
           </div>
         </div>
       </div>
@@ -33,9 +40,16 @@ function UsersSuggestion() {
         <div className={styles.user_suggestions_header_action}>See all</div>
       </div>
       <div className={styles.user_suggestions_cards}>
-        <UserCard />
-        <UserCard />
-        <UserCard />
+        {UsersPlaceholderData.slice(0, 5).map((user) => {
+          return (
+            <UserCard
+              key={user.id}
+              profileImage={user.profile_image.medium}
+              name={user.name}
+              username={user.username}
+            />
+          );
+        })}
       </div>
     </div>
   );

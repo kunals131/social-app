@@ -37,3 +37,5 @@ export const getTopics = (page = 1, per_page = 10, order_by = 'featured') =>
       order_by: order_by,
     },
   }).then(res=>res.data);
+
+

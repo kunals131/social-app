@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import styles from './StoriesCollection.module.css';
 
 import useIsMounted from '@/hooks/utils/useIsMounted';
@@ -27,16 +27,21 @@ const StoryElement = ({ seen, firstName, profileImage }) => {
   );
 };
 
-const StoriesCollection = ({topics}) => {
+const StoriesCollection = ({ topics }) => {
   const ref = useRef();
   const [scrollContainerWidth, setScrollContainerWidth] = useState(0);
   const { isMounted } = useIsMounted();
+  const handleMaxContainerWidth = useCallback(()=>{
+    setScrollContainerWidth(ref.current.offsetWidth);
+  }, []);
   useEffect(() => {
     if (isMounted) {
-      setScrollContainerWidth(ref.current.offsetWidth);
+      handleMaxContainerWidth();
+      window.addEventListener('resize',handleMaxContainerWidth)
+      return ()=>window.removeEventListener('resize', handleMaxContainerWidth)
     }
   }, [isMounted]);
-  console.log(topics, 'Topics')
+  console.log(topics, 'Topics');
 
   return (
     <div
@@ -44,16 +49,22 @@ const StoriesCollection = ({topics}) => {
       ref={ref}
       className={`${styles.storiesCollection}`}
     >
-      <div className={`${styles.storiesCollection_container} no-scrollbar-horizontal`}>
+      <div
+        className={`${styles.storiesCollection_container} no-scrollbar-horizontal`}
+      >
         {scrollContainerWidth && (
           <>
-          {topics.pages.map(topicPage=>{
-            return topicPage.map(topic=>{
-              return (
-                <StoryElement key={topic.id} firstName={topic.title} profileImage={topic.cover_photo.urls.regular}/>
-              )
-            })
-          })}
+            {topics.pages.map((topicPage) => {
+              return topicPage.map((topic) => {
+                return (
+                  <StoryElement
+                    key={topic.id}
+                    firstName={topic.title}
+                    profileImage={topic.cover_photo.urls.regular}
+                  />
+                );
+              });
+            })}
           </>
         )}
       </div>
