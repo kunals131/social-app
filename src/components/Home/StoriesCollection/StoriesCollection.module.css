@@ -27,7 +27,11 @@
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  border-color: 2px;
+  
+}
+
+.storyElement_container:hover {
+
 }
 
 .storyElement_container_active {
@@ -44,8 +48,9 @@
 
 .storyElement_container_image {
   border-radius: 0.75rem;
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  border-radius: 50%;
+  height: 75px;
 }
 
 .storyElement_name {

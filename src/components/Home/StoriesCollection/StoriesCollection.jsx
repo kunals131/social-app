@@ -1,15 +1,13 @@
 import React from 'react';
 import styles from './StoriesCollection.module.css';
+import { UserPlaceholderURL } from '@/utils/assets';
 
 const StoryElement = ({ seen, firstName, profileImage }) => {
   return (
     <div className={styles.storyElement}>
       <div
-        className={`${
-          !seen
-            ? styles.storyElement_container_active
-            : styles.storyElement_container_inactive
-        } ${styles.storyElement_container}}`}
+      style={{backgroundColor: seen ? '#404040' : '#4858d1'}}
+        className={styles.storyElement_container}
       >
         <div
           style={{
@@ -32,12 +30,12 @@ const StoriesCollection = () => {
   return (
     <div className={styles.storiesCollection}>
       <div className={styles.storiesCollection_container}>
-        <StoryElement />
-        <StoryElement seen />
-        <StoryElement seen />
-        <StoryElement seen />
-        <StoryElement seen />
-        <StoryElement seen />
+        <StoryElement profileImage={UserPlaceholderURL} />
+        <StoryElement profileImage={UserPlaceholderURL} seen />
+        <StoryElement profileImage={UserPlaceholderURL} seen />
+        <StoryElement profileImage={UserPlaceholderURL} seen />
+        <StoryElement profileImage={UserPlaceholderURL} seen />
+        <StoryElement profileImage={UserPlaceholderURL} seen />
       </div>
     </div>
   );

@@ -6,6 +6,8 @@ import StoriesCollection from '@/components/Home/StoriesCollection/StoriesCollec
 
 import ExploreFeed from '@/components/Home/ExploreFeed/ExploreFeed';
 import PostsContainer from '@/components/Home/PostsContainer/PostsContainer';
+import UsersSuggestion from '@/components/Home/UsersSuggestion/UsersSuggestion';
+import Activity from '@/components/Home/Activity/Activity';
 
 const Home = () => {
   return (
@@ -19,7 +21,10 @@ const Home = () => {
           <StoriesCollection />
           <PostsContainer />
         </div>
-        <div className={styles.home_right}></div>
+        <div className={styles.home_right}>
+          <Activity/>
+          <UsersSuggestion/>
+        </div>
       </div>
     </BaseLayout>
   );

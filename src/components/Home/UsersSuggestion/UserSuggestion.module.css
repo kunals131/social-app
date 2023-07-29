@@ -1,0 +1,75 @@
+.user_suggestions {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  background: #282828;
+}
+
+.user_suggestions_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_suggestions_header_title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.user_suggestions_header_action {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: #6b7280;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.user_suggestions_card {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_suggestions_card_info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.user_suggestions_card_info_img {
+  border-radius: 9999px;
+  background-color: #d1d5db;
+  width: 40px;
+  height: 40px;
+}
+
+.user_suggestions_card_info_name {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.user_suggestions_card_info_username {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  opacity: 0.5;
+}
+
+.user_suggestions_card_action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  width: 40px;
+  background-color: var(--primary-color);
+  height: 40px;
+}
+
+.user_suggestions_cards {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}

@@ -4,7 +4,7 @@ import {
   HiOutlineBookmark,
   HiOutlineChatBubbleOvalLeft,
   HiOutlineHeart,
-  HiOutlineShare,
+  HiOutlinePaperAirplane,
 } from 'react-icons/hi2';
 import styles from './Post.module.css';
 const Img1 =
@@ -67,7 +67,7 @@ const Post = () => {
             className={styles.post_action_icon}
             size={24}
           />
-          <HiOutlineShare className={styles.post_action_icon} size={24} />
+          <HiOutlinePaperAirplane style={{transform : 'rotate(-30deg)', position :'relative', top : '-2.5px'}} className={styles.post_action_icon} size={24} />
         </div>
         <HiOutlineBookmark size={24} />
       </div>
