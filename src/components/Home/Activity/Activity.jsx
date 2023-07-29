@@ -26,6 +26,7 @@ const Activity = () => {
       <div className={styles.activity_header}>Recent Activity</div>
       <div className={styles.activity_list}>
         <ActivityItem/>
+        <ActivityItem/>
       </div>
     </div>
   );

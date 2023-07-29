@@ -30,12 +30,12 @@ const StoriesCollection = () => {
   return (
     <div className={styles.storiesCollection}>
       <div className={styles.storiesCollection_container}>
-        <StoryElement profileImage={UserPlaceholderURL} />
-        <StoryElement profileImage={UserPlaceholderURL} seen />
-        <StoryElement profileImage={UserPlaceholderURL} seen />
-        <StoryElement profileImage={UserPlaceholderURL} seen />
-        <StoryElement profileImage={UserPlaceholderURL} seen />
-        <StoryElement profileImage={UserPlaceholderURL} seen />
+        <StoryElement firstName='kunals131' profileImage={UserPlaceholderURL} />
+        <StoryElement firstName='kunals131' profileImage={UserPlaceholderURL} seen />
+        <StoryElement firstName='kunals131' profileImage={UserPlaceholderURL} seen />
+        <StoryElement firstName='kunals131' profileImage={UserPlaceholderURL} seen />
+        <StoryElement firstName='kunals131' profileImage={UserPlaceholderURL} seen />
+        <StoryElement firstName='kunals131' profileImage={UserPlaceholderURL} seen />
       </div>
     </div>
   );
