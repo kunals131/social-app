@@ -48,13 +48,27 @@
 
 .storyElement_container_image {
   border-radius: 0.75rem;
-  width: 65px;
+  width: 67px;
   border-radius: 50%;
-  height: 65px;
+  height: 67px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
+
+.storyElement_container_image:hover {
+  width: 62px;
+  height: 62px;
+}
+
+
 
 .storyElement_name {
   margin-top: 0.5rem;
   font-size: 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide the overflowing content */
+  text-overflow: ellipsis; /* Truncate the text with an ellipsis */
+  text-align: center;
   line-height: 1.25rem;
 }

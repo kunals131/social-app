@@ -57,3 +57,18 @@ a {
   display: flex;
   align-items: center;
 }
+
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar-horizontal::-webkit-scrollbar {
+  display: none;
+  height: 0px;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar-horizontal {
+  -ms-overflow-style: none;  /* IE and Edge */
+  
+  scrollbar-width: none;  /* Firefox */
+}

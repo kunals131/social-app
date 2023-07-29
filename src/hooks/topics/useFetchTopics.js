@@ -1,20 +1,20 @@
-import { getCollections } from '@/lib/unsplash/services';
+import { getTopics } from '@/lib/unsplash/services';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
-export const useFetchColections = ({ initialData = [] }) => {
+export const useFetchTopics = ({ initialData = [] }) => {
   const [currentPage, setCurrentPage] = useState(2);
   const [isActive, setIsActive] = useState(false);
   const {
-    data: collections,
+    data: topics,
     isFetchingNextPage,
     fetchNextPage,
     hasNextPage,
     isError,
     error,
   } = useInfiniteQuery(
-    ['collections'],
-    ({ pageParam = 2 }) => getCollections(pageParam),
+    ['topics'],
+    ({ pageParam = 1 }) => getTopics(pageParam),
     {
       enabled: isActive,
       getNextPageParam: (/*lastPage, pages*/) => {
@@ -43,7 +43,7 @@ export const useFetchColections = ({ initialData = [] }) => {
 
   return {
     fetchNext: handleFetchNext,
-    collections,
+    topics,
     isFetchingNextPage,
     hasNextPage,
     isError,
