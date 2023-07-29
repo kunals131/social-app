@@ -137,3 +137,11 @@
   color: #ffffff;
   scale: 1.02;
 }
+
+.post_header_user_creds {
+  cursor: pointer;
+}
+.post_header_user_creds:hover .post_header_user_name {
+  text-decoration: underline;
+
+}

@@ -12,11 +12,20 @@
   z-index: 3;
 }
 
-.profileCover_user_img {
+.profileCover_user_img_container {
   border-radius: 9999px;
   background-color: #e5e7eb;
   width: 140px;
   height: 140px;
+  position: relative;
+}
+
+.profileCover_user_img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .profileCover_user_info {

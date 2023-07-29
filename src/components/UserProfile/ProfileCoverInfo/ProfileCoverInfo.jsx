@@ -2,17 +2,25 @@ import React from 'react';
 import styles from './ProfileCoverIinfo.module.css';
 import UserStats from '../UserStats/UserStats';
 import { CoverPlaceholderURL } from '@/utils/assets';
-const ProfileCoverInfo = () => {
+import Image from 'next/image';
+const ProfileCoverInfo = ({user}) => {
+  console.log(user)
   return (
     <div className={styles.profileCover}>
       <div className={styles.profileCover_user}>
-        <div className={styles.profileCover_user_img}></div>
+        <div className={styles.profileCover_user_img_container}>
+          <Image
+          src={user.profile_image.large}
+          fill
+          className={styles.profileCover_user_img}
+          />
+        </div>
         <div className={styles.profileCover_user_info}>
           <div className={styles.profileCover_user_info_name}>
-            Kunal Sangtiani
+            {user.name}
           </div>
           <div className={styles.profileCover_user_info_username}>
-            @kunals131
+            @{user.username}
           </div>
         </div>
       </div>
@@ -24,10 +32,10 @@ const ProfileCoverInfo = () => {
           className={styles.profileCover_coverImg}
         ></div>
         <div className={styles.profileCover_stats_container_inner}>
-          <UserStats value={200} label="Followers" />
-          <UserStats value={120} label="Following" />
-          <UserStats value={201} label="Posts" />
-          <UserStats value={120} label="Photos" />
+          <UserStats value={user.followers_count} label="Followers" />
+          <UserStats value={user.following_count} label="Following" />
+          <UserStats value={user.total_photos} label="Posts" />
+          <UserStats value={user.total_likes} label="Likes" />
         </div>
       </div>
     </div>

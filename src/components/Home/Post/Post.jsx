@@ -8,6 +8,8 @@ import {
 } from 'react-icons/hi2';
 import styles from './Post.module.css';
 import Image from 'next/image';
+import TextTruncateExpand from '@/components/common/TextTruncateExpand';
+import { useRouter } from 'next/router';
 const Img1 =
   'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80';
 const Img2 =
@@ -57,6 +59,7 @@ const Post = ({
   blurHash,
   // isLiked,
 }) => {
+  const router = useRouter();
   return (
     <div className={styles.post}>
       <div className={styles.post_header}>
@@ -69,7 +72,7 @@ const Post = ({
               className={styles.post_header_user_img}
             />
           </div>
-          <div>
+          <div onClick={()=>router.push(`/user/${user.username}`)} className={styles.post_header_user_creds}>
             <div className={styles.post_header_user_name}>{user.name}</div>
             <div className={styles.post_header_user_location}>
               @{user.username}
@@ -110,9 +113,7 @@ const Post = ({
       <LikeCount count={likes} />
       <div className={styles.post_text}>
         {user.username}{' '}
-        <span style={{ fontWeight: 100 }}>
-          {description ? description : alt_description}
-        </span>
+        <TextTruncateExpand style={{fontWeight : 100, cursor: 'pointer'}} maxLength={50} text={(description ? description : alt_description)}/>
       </div>
     </div>
   );

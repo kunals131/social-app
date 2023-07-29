@@ -30,12 +30,25 @@ export const getCollections = (page = 1, per_page = 10) =>
     .then((res) => res.data);
 
 export const getTopics = (page = 1, per_page = 10, order_by = 'featured') =>
-  unsplash.get('/topics', {
-    params: {
-      per_page: per_page,
-      page: page,
-      order_by: order_by,
-    },
-  }).then(res=>res.data);
+  unsplash
+    .get('/topics', {
+      params: {
+        per_page: per_page,
+        page: page,
+        order_by: order_by,
+      },
+    })
+    .then((res) => res.data);
 
+export const getUserByUsername = (username) =>
+  unsplash.get(`/users/${username}`).then((res) => res.data);
 
+export const getUserPhotos = (username, page = 1, per_page = 10) =>
+  unsplash
+    .get(`/users/${username}/photos`, {
+      params: {
+        per_page: per_page,
+        page: page,
+      },
+    })
+    .then((res) => res.data);
