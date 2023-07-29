@@ -1,0 +1,19 @@
+.user_stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_stats div {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.user_stats p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: center;
+  opacity: 0.6;
+}

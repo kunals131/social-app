@@ -1,0 +1,16 @@
+.user_detail_item {
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.user_detail_item p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.user_detail_item div {
+  flex-shrink: 0;
+}

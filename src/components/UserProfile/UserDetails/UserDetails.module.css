@@ -1,0 +1,51 @@
+.user_details {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 1rem;
+  border-radius: 0.375rem;
+  width: 100%;
+  height: fit-content;
+  background: #282828;
+}
+
+.user_details_header {
+  display: flex;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-width: 1px;
+}
+
+.user_details_header_title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.user_details_bio {
+  padding-bottom: 0.75rem;
+  margin-top: 0.75rem;
+  border-bottom-width: 1px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0.9;
+}
+
+.user_details_container {
+  display: flex;
+  margin-top: 0.75rem;
+  flex-direction: column;
+}
+
+
+.user_details_button {
+    padding-top: 0.75rem;
+padding-bottom: 0.75rem; 
+margin-top: 1rem; 
+border-radius: 0.5rem; 
+width: 100%; 
+background: #2f2e2e;
+
+}

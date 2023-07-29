@@ -1,0 +1,27 @@
+.userProfile {
+  display: grid;
+  position: relative;
+  gap: 1.5rem;
+  width: 100%;
+  grid-template-columns: 4fr 1.2fr;
+}
+
+.userProfile_info {
+  display: grid;
+  grid-template-columns: 1.4fr 3fr;
+  margin-top: 1.25rem;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+
+.userProfile_collections {
+    margin-top: 1rem;
+}
+
+.userProfile_posts_list {
+    display: flex; 
+flex-direction: column; 
+gap: 0.75rem; 
+width: 100%; 
+}
