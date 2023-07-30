@@ -74,13 +74,21 @@
   border-radius: 9999px;
   width: 40px;
   background-color: var(--primary-color-low-opacity);
+  cursor: pointer;
   height: 40px;
+  transition: all 0.2s ease-in-out  ;
+  color: var(--primary-color);
+}
+.user_suggestions_card_action:hover {
+  background-color: var(--primary-color);
+  color: white;
+
 }
 
 .user_suggestions_card_action_icon {
   font-size: 1.25rem;
   line-height: 1.75rem;
-  color: var(--primary-color);
+
 }
 
 .user_suggestions_cards {

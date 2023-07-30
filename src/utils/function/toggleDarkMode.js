@@ -4,7 +4,7 @@ export const handleDarkMode = (isDark) => {
     var r = window.document.querySelector(':root');
     r.style.setProperty('--primary-background', '#1a1a1a');
     r.style.setProperty('--bg-elevation-1', '#282828');
-    r.style.setProperty('--bg-elevation-1c', '#282828');
+    r.style.setProperty('--bg-elevation-1c', '#2f2e2e');
     r.style.setProperty('--bg-elevation-2', '#2f2e2e');
     r.style.setProperty('--primary-text-color', '#ffff');
     r.style.setProperty('--header-bg-color', '#1a1a1a');
