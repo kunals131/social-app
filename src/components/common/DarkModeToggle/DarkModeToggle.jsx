@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import styles from './DarkModeToggle.module.css'
+import styles from './DarkModeToggle.module.css';
 import { handleDarkMode } from '@/utils/function/toggleDarkMode';
 const isDark = () =>
   (localStorage && localStorage.theme === 'dark') ||
@@ -9,18 +9,15 @@ const isDark = () =>
 
 const getThemeString = (isDark) => (isDark ? 'dark' : 'light');
 
-const DarkModeToggle = ({...props}) => {
+const DarkModeToggle = ({ ...props }) => {
   const [isDarkMode, setDarkMode] = useState(true);
 
   const toggleMode = () => {
     localStorage.theme = getThemeString(!isDarkMode);
     if (localStorage.theme === 'dark') {
-      document.documentElement.classList.add('dark');
       handleDarkMode(true);
     } else {
-      document.documentElement.classList.remove('dark');
       handleDarkMode(false);
-
     }
     setDarkMode(!isDarkMode);
   };
@@ -29,14 +26,11 @@ const DarkModeToggle = ({...props}) => {
     if (isDark()) {
       handleDarkMode(true);
     } else {
-    //   document.documentElement.classList.remove('dark');
-    handleDarkMode(false)
+      handleDarkMode(false);
     }
     setDarkMode(isDark());
   }, []);
 
-  // const darkModeActive: boolean =
-  //     process.browser && document.documentElement.classList.contains('dark')
   return (
     <AnimatePresence mode="wait" initial={false}>
       <motion.button
