@@ -3,26 +3,29 @@ import styles from './UserSuggestion.module.css';
 import { HiOutlineUserPlus } from 'react-icons/hi2';
 import { UsersPlaceholderData } from '@/utils/data/static/UsersPlaceholderData';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const UserCard = ({ profileImage, name, username }) => {
   return (
     <div className={styles.user_suggestions_card}>
-      <div className={styles.user_suggestions_card_info}>
-        <div className={styles.user_suggestions_card_info_img_container}>
-          <Image
-            src={profileImage}
-            alt={name}
-            fill
-            className={styles.user_suggestions_card_info_img}
-          />
-        </div>
-        <div>
-          <div className={styles.user_suggestions_card_info_name}>{name}</div>
-          <div className={styles.user_suggestions_card_info_username}>
-            @{username}
+      <Link href={`/user/${username}`}>
+        <div className={styles.user_suggestions_card_info}>
+          <div className={styles.user_suggestions_card_info_img_container}>
+            <Image
+              src={profileImage}
+              alt={name}
+              fill
+              className={styles.user_suggestions_card_info_img}
+            />
+          </div>
+          <div>
+            <div className={styles.user_suggestions_card_info_name}>{name}</div>
+            <div className={styles.user_suggestions_card_info_username}>
+              @{username}
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
       <div className={styles.user_suggestions_card_action}>
         <HiOutlineUserPlus
           strokeWidth={1}

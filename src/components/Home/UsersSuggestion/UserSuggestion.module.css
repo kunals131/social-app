@@ -37,6 +37,7 @@
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .user_suggestions_card_info_img_container {
@@ -51,6 +52,7 @@
   border-radius: 9999px;
   object-fit: cover;
   width: 100%;
+  transition: all 0.2s ease-in-out;
   height: 100%;
 }
 
@@ -86,4 +88,12 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+}
+
+.user_suggestions_card_info:hover .user_suggestions_card_info_name {
+  text-decoration: underline;
+}
+
+.user_suggestions_card_info:hover .user_suggestions_card_info_img {
+  transform: scale(0.95);
 }
