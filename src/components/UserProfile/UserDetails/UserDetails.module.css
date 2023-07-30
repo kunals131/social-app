@@ -55,5 +55,6 @@
 }
 
 .user_details_button:hover {
-  background: #2b2b2b;
+  background:var(--bg-elevation-2);
+  scale: 1.02;
 }

@@ -77,6 +77,7 @@ export const getServerSideProps = async () => {
       },
     };
   } catch (err) {
+    console.log(err?.response?.data, 'Home Page Error');
     return {
       redirect: {
         destination: err?.response?.data.includes('Rate Limit Exceeded')
