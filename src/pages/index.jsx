@@ -77,9 +77,13 @@ export const getServerSideProps = async () => {
       },
     };
   } catch (err) {
-    //return to a 500 error page
     return {
-      notFound: true,
+      redirect: {
+        destination: err?.response?.data.includes('Rate Limit Exceeded')
+          ? '/error'
+          : '/500',
+        permanent: false,
+      },
     };
   }
 };

@@ -55,27 +55,30 @@ export const getServerSideProps = async (req) => {
   let initialLoadPhotos;
   try {
     userData = await getUserByUsername(username);
-  } catch (err) {
-    console.log('Fetch User Error ');
-    return {
-      notFound: true,
-    };
-  }
-  try {
     initialLoadPhotos = await getUserPhotos(username);
-  } catch (err) {
-    console.log(err);
     return {
-      notFound: true,
+      props: {
+        userData,
+        initialLoadPhotos,
+        username,
+      },
+    };
+  } catch (err) {
+    if (err.status === 404) return { notFound: true };
+    if (err.reponse.data.includes('Rate Limit Exceeded'))
+      return {
+        redirect: {
+          destination: '/error',
+          permanent: false,
+        },
+      };
+    return {
+      redirect: {
+        destination: '/500',
+        permanent: false,
+      },
     };
   }
-  return {
-    props: {
-      userData,
-      initialLoadPhotos,
-      username,
-    },
-  };
 };
 
 export default UserProfile;
