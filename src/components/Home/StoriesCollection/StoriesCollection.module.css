@@ -27,11 +27,9 @@
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  
 }
 
 .storyElement_container:hover {
-
 }
 
 .storyElement_container_active {
@@ -60,8 +58,6 @@
   height: 62px;
 }
 
-
-
 .storyElement_name {
   margin-top: 0.5rem;
   font-size: 0.75rem;
@@ -71,4 +67,41 @@
   text-overflow: ellipsis; /* Truncate the text with an ellipsis */
   text-align: center;
   line-height: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .storiesCollection {
+    background-color: transparent;
+    padding: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.195);
+    border-radius: 8px;
+  }
+
+  .storyElement_container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .storyElement_container_image {
+    width: 57px;
+    height: 57px;
+  }
+
+  .storyElement_name {
+    font-size: 0.65rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .storyElement_container {
+    width: 52px;
+    height: 52px;
+  }
+  .storyElement_container_image {
+    width: 50px;
+    height: 50px;
+  }
+  .storyElement_name {
+    font-size: 0.65rem;
+  }
 }

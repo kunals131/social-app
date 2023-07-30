@@ -35,9 +35,8 @@
   border-radius: 9999px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
-
 
 .post_header_user_name {
   font-size: 0.875rem;
@@ -57,7 +56,7 @@
 .post_img_container {
   margin-top: 1rem;
   border-radius: 1rem;
-  background-color: #e5e7eb;
+
   height: 400px;
   position: relative;
 }
@@ -71,7 +70,6 @@
 
 .user_profile_img {
   border-radius: 9999px;
-
 }
 
 .post_actions_container {
@@ -143,5 +141,70 @@
 }
 .post_header_user_creds:hover .post_header_user_name {
   text-decoration: underline;
+}
 
+@media screen and (max-width: 768px) {
+  .post {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .post {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .post_header_user_img_container {
+    width: 42px;
+    height: 42px;
+  }
+  .post_header_user_name {
+    font-size: 0.85rem;
+  }
+
+  .post_likes_text {
+    font-size: 0.8rem;
+    margin-left: -6px;
+  }
+  .post_likes_img {
+    width: 24px;
+    height: 24px;
+  }
+  .post_text {
+    font-size: 0.85rem;
+    margin-top: -10px;
+  }
+  .post_img_container {
+    height: 360px;
+  }
+  /* .post_action_icon {} */
+  .post_header_user_img {
+    object-fit: contain !important;
+  }
+  .post_likes {
+    margin-top: 0.75rem;
+  }
+  .post_actions_container {
+    margin-top: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .post_img {
+    height: 320px;
+    border-radius: 0.3rem;
+  }
+  .post {
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.45rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .post_img_container {
+    height: 280px;
+  }
 }

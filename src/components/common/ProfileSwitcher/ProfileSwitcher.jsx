@@ -18,7 +18,7 @@ const ProfileSwitcher = () => {
         </div>
         <div className={styles.profile_switcher_info_name}>Evan leeds</div>
       </div>
-      <RiArrowDownSFill />
+      <RiArrowDownSFill className={styles.profile_switcher_dropdown} />
     </div>
   );
 };

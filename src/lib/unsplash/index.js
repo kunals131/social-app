@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const access_key = '-m4cw7kLCM3Jpg4eHkmri8t8WrvAlxw5r5ZXTfNx5dE'
+const access_key = 'MfnYS0Dd9ScNxtnh5Iluf6JL-COWQEfnaFlsc0ZFzp8'
 
 export const unsplash = axios.create({
     baseURL: "https://api.unsplash.com/",

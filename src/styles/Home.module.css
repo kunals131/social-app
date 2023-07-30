@@ -17,3 +17,33 @@
 .home_right {
   width: 100%;
 }
+
+@media screen and (max-width: 1350px) {
+  .home {
+    grid-template-columns: 2fr 3.5fr 2fr;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home_right {
+    display: none;
+  }
+  .home {
+    grid-template-columns: 2fr 4fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home {
+    grid-template-columns: 2fr 3.5fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .home_left {
+    display: none;
+  }
+}

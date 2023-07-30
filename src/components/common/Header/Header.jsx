@@ -22,6 +22,7 @@ const Header = () => {
         <div className={styles.header_left_search}>
           <input className="" placeholder="#Explore" />
         </div>
+        <div className={styles.header_left_logoText}>Social</div>
       </div>
       <div className={styles.header_center}>
         <Navigation />

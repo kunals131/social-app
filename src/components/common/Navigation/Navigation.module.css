@@ -14,6 +14,9 @@
   flex-direction: column;
   transition: all 0.2s ease-in-out;
 }
+.navigation_icon_svg {
+  font-size: 1.5rem;
+}
 .navigation_icon:hover {
   opacity: 80%;
   scale: 1.05;
@@ -28,4 +31,54 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
+}
+
+.glassmorph_bg {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    width: 100%;
+    bottom: 0rem;
+    z-index: 99999;
+    left: 50%;
+    padding: 1rem 2.5rem;
+    transform: translateX(-50%);
+    background-color: var(--elevation-1);
+    justify-content: space-between;
+    border-radius: 0;
+    border-top: 1px solid #ffffff23;
+  }
+  .navigation_icon_svg {
+    font-size: 1.3rem;
+  }
+  .navigation_icon_activeIcon {
+    width: 100%;
+    border-radius: 0;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .navigation {
+    padding:0.8rem 1.6rem;
+  }
+  .navigation_icon_svg {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .navigation {
+    padding: 0.7rem 1.4rem;
+  }
+
 }

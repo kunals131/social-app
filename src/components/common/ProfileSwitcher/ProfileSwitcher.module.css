@@ -49,3 +49,33 @@
 .profile_switcher_info_img {
   position: relative;
 }
+
+@media screen and (max-width: 768px) {
+  .profile_switcher {
+    background-color: transparent;
+    border: none;
+    gap: 6px;
+  }
+  .profile_switcher_info_name {
+    display: none;
+  }
+
+  .profile_switcher_dropdown {
+    font-size: 1.2rem;
+  }
+  .profile_switcher_info_img {
+    width: 38px;
+    height: 38px;
+  }
+  .profile_switcher_info_img img {
+    border-radius: 50%;
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .profile_switcher_info_img {
+    width: 35px;
+    height: 35px;
+  }
+}

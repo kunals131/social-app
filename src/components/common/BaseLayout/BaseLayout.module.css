@@ -4,3 +4,23 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+@media (max-width: 1500px) {
+  .layout {
+    padding: 4px 2.1rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .layout {
+    padding: 4px 1rem;
+  }
+}
+
+
+@media screen and (max-width:400px) {
+  .layout {
+    padding: 4px 0.6rem;
+  }
+  
+}

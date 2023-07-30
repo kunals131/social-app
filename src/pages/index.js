@@ -76,6 +76,10 @@ export const getServerSideProps = async () => {
     };
   } catch (err) {
     //return to a 500 error page
+    console.log(err);
+    return {
+      notFound: true
+    }
   }
 };
 

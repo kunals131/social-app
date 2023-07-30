@@ -30,7 +30,9 @@ export default function App({ Component, pageProps }) {
           initial="false"
           onExitComplete={() => window.scrollTo(0, 0)}
         >
+          <div className='page-contents'>
           <Component {...pageProps} />
+          </div>
         </AnimatePresence>
       </QueryClientProvider>
     </>
