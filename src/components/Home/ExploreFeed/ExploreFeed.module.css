@@ -33,3 +33,12 @@
 .exploreFeed_gallary img {
   border-radius: 0.75rem;
 }
+
+.exploreFeed_gallary_image {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.exploreFeed_gallary_image:hover{
+  transform: scale(1.05);
+}

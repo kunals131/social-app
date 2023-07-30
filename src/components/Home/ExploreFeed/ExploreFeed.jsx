@@ -13,6 +13,7 @@ const ExploreFeed = ({collections}) => {
     }
     return [];
   }, [collections]);
+  console.log(collections)
 
   console.log(Images)
   return (
@@ -37,6 +38,7 @@ const ExploreFeed = ({collections}) => {
                     width: '100%',
                     display: 'block',
                   }}
+                  className={styles.exploreFeed_gallary_image}
                 />
                 </picture>
               </div>
