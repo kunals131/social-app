@@ -226,4 +226,7 @@
   .post_img_container {
     height: 280px;
   }
+  .post_text {
+    font-size: 0.8rem;
+  }
 }

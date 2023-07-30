@@ -12,32 +12,28 @@ import TextTruncateExpand from '@/components/common/TextTruncateExpand';
 import { useRouter } from 'next/router';
 import { AiOutlineExpand } from 'react-icons/ai';
 import { BsArrowsAngleContract } from 'react-icons/bs';
+import { RandomUserImages } from '@/utils/assets';
 
-const Img1 =
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80';
-const Img2 =
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80';
-const Img3 =
-  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80';
+
 const LikeCount = ({ count }) => {
   return (
     <div className={styles.post_likes}>
       <div className="flex-align-center">
         <div
-          style={{ background: `url(${Img1}) center center/cover` }}
+          style={{ background: `url(${RandomUserImages[1]}) center center/cover` }}
           className={styles.post_likes_img}
         ></div>
         <div
           style={{
             left: '-0.5rem',
-            background: `url(${Img2}) center center/cover`,
+            background: `url(${RandomUserImages[0]}) center center/cover`,
           }}
           className={styles.post_likes_img}
         ></div>
         <div
           style={{
             left: '-1rem',
-            background: `url(${Img3}) center center/cover`,
+            background: `url(${RandomUserImages[2]}) center center/cover`,
           }}
           className={styles.post_likes_img}
         ></div>
