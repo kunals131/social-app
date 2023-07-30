@@ -9,9 +9,8 @@ const useIsMounted = () => {
   }, []);
 
   return {
-    isMounted
-  }
+    isMounted,
+  };
 };
 
-
-export default useIsMounted
+export default useIsMounted;

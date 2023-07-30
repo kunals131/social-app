@@ -5,7 +5,8 @@ import styles from './UserDetails.module.css';
 import { HiGlobeAmericas, HiOutlineMapPin } from 'react-icons/hi2';
 import {AiOutlineInstagram} from 'react-icons/ai'
 import {FiTwitter} from 'react-icons/fi';
-const UserDetails = () => {
+import TextTruncateExpand from '@/components/common/TextTruncateExpand';
+const UserDetails = ({user}) => {
   return (
     <div className={styles.user_details}>
       <div className={styles.user_details_header}>
@@ -13,8 +14,7 @@ const UserDetails = () => {
         <BsThreeDots></BsThreeDots>
       </div>
       <div className={styles.user_details_bio}>
-        Hello I{"'"}m a photographer with great open ideas and awesome ready
-        state⭐
+        <TextTruncateExpand maxLength={100}  text={user.bio}/>
       </div>
       <div className={styles.user_details_container}>
         <UserDetailItem

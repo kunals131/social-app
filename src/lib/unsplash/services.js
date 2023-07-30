@@ -52,3 +52,5 @@ export const getUserPhotos = (username, page = 1, per_page = 10) =>
       },
     })
     .then((res) => res.data);
+
+export const getUserCollections = () => {};

@@ -28,7 +28,7 @@ const UserProfile = ({ userData, initialLoadPhotos, username }) => {
           <ProfileCoverInfo user={userData} />
           <div className={styles.userProfile_info}>
             <div>
-              <UserDetails />
+              <UserDetails  user={userData}/>
               <div className={styles.userProfile_collections}>
                 {/* <ExploreFeed /> */}
               </div>

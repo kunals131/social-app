@@ -3,6 +3,7 @@
   --primary-font: 'Manrope', sans-serif;
 
   --primary-color: #5367ff;
+  --primary-color-low-opacity: rgba(83, 103, 255, 0.05);
   --secondary-color: '#00ffc4';
 
   --primary-background: #1a1a1a;

@@ -24,7 +24,10 @@ const UserCard = ({ profileImage, name, username }) => {
         </div>
       </div>
       <div className={styles.user_suggestions_card_action}>
-        <HiOutlineUserPlus />
+        <HiOutlineUserPlus
+          strokeWidth={1}
+          className={styles.user_suggestions_card_action_icon}
+        />
       </div>
     </div>
   );

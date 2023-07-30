@@ -5,16 +5,19 @@ import { LogoWEBP } from '@/utils/assets';
 import Navigation from '../Navigation/Navigation';
 
 import ProfileSwitcher from '../ProfileSwitcher/ProfileSwitcher';
+import Link from 'next/link';
 const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.header_left}>
         <div className={styles.header_left_logo}>
+          <Link href={'/'}>
           <Image
             alt="logo"
             src={LogoWEBP}
             className={styles.header_left_logo_img}
           />
+          </Link>
         </div>
         <div className={styles.header_left_search}>
           <input className="" placeholder="#Explore" />
