@@ -13,9 +13,7 @@ const ExploreFeed = ({collections}) => {
     }
     return [];
   }, [collections]);
-  console.log(collections)
 
-  console.log(Images)
   return (
     <div className={styles.exploreFeed}>
       <div className={styles.exploreFeed_header}>

@@ -16,7 +16,7 @@ const InfiniteScrollContainer = ({
     if (isInView && hasMore) {
       fetchMore();
     }
-  }, [isInView, fetchMore]);
+  }, [isInView, fetchMore,hasMore]);
 
   return (
     <>

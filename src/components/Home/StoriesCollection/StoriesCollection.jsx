@@ -40,8 +40,8 @@ const StoriesCollection = ({ topics }) => {
       window.addEventListener('resize',handleMaxContainerWidth)
       return ()=>window.removeEventListener('resize', handleMaxContainerWidth)
     }
-  }, [isMounted]);
-  console.log(topics, 'Topics');
+  }, [isMounted,handleMaxContainerWidth]);
+
 
   return (
     <div

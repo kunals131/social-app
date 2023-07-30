@@ -50,7 +50,6 @@ const UserProfile = ({ userData, initialLoadPhotos, username }) => {
 
 export const getServerSideProps = async (req) => {
   const username = req.query.username;
-  console.log(username);
   let userData;
   let initialLoadPhotos;
   try {

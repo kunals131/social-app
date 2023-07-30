@@ -12,6 +12,7 @@ import TextTruncateExpand from '@/components/common/TextTruncateExpand';
 import { useRouter } from 'next/router';
 import { AiOutlineExpand } from 'react-icons/ai';
 import { BsArrowsAngleContract } from 'react-icons/bs';
+
 const Img1 =
   'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80';
 const Img2 =
@@ -63,6 +64,7 @@ const Post = ({
 }) => {
   const [isFullImage, setIsFullImage] = useState(false);
   const router = useRouter();
+
   return (
     <div className={styles.post}>
       <div className={styles.post_header}>
@@ -106,7 +108,7 @@ const Post = ({
           className={styles.post_img}
           placeholder="blur"
           style={{ objectFit: isFullImage ? 'contain' : 'cover' }}
-          blurDataURL={blurHash}
+          blurDataURL={`data:image/jpeg;base64,${blurHash}`}
         />
       </div>
       <div className={styles.post_actions_container}>

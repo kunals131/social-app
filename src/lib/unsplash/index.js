@@ -13,7 +13,6 @@ unsplash.interceptors.response.use(
   (response) => response,
   (error) => {
     const { data } = error.response;
-    console.log(error.response.data);
     if (typeof data == 'string' && data.includes('Rate Limit Exceeded')) {
       if (typeof window !== 'undefined') {
         window.location.href = '/error';

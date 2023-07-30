@@ -4,7 +4,7 @@ import UserStats from '../UserStats/UserStats';
 import { CoverPlaceholderURL } from '@/utils/assets';
 import Image from 'next/image';
 const ProfileCoverInfo = ({ user }) => {
-  console.log(user);
+
   return (
     <div className={styles.profileCover}>
       <div className={styles.profileCover_user}>
@@ -12,6 +12,7 @@ const ProfileCoverInfo = ({ user }) => {
           <Image
             src={user.profile_image.large}
             fill
+            alt={`user-profile-${user.username}`}
             className={styles.profileCover_user_img}
           />
         </div>

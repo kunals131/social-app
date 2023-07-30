@@ -3,7 +3,7 @@ import styles from './PostsContianer.module.css';
 import Post from '../Post/Post';
 
 const PostsContainer = ({ photos }) => {
-  console.log(photos);
+
   return (
     <div className={styles.posts}>
       {photos?.pages?.map((items) => {
