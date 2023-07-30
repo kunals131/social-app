@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import '@/styles/nprogress.css';
 import { AnimatePresence } from 'framer-motion';
-import Header from '@/components/common/Header/Header';
+import { Header } from '@/components/common';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';

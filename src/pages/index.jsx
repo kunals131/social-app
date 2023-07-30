@@ -15,7 +15,7 @@ import {
   getTopics,
 } from '@/lib/unsplash/services';
 import { useFetchRandomPhotos } from '@/hooks/photos/useFetchRandomPhotos';
-import InfiniteScrollContainer from '@/components/common/InfiniteScrollContainer/InfiniteScrollContainer';
+import { InfiniteScrollContainer } from '@/components/common';
 import { useFetchColections } from '@/hooks/collections/useFetchCollections';
 import { useFetchTopics } from '@/hooks/topics/useFetchTopics';
 
@@ -50,7 +50,7 @@ const Home = ({
             isFetching={isFetchingNextPage}
           >
             <div className={styles.home_center_posts}>
-            <PostsContainer photos={photos} />
+              <PostsContainer photos={photos} />
             </div>
           </InfiniteScrollContainer>
         </div>
@@ -78,10 +78,9 @@ export const getServerSideProps = async () => {
     };
   } catch (err) {
     //return to a 500 error page
-    console.log(err);
     return {
-      notFound: true
-    }
+      notFound: true,
+    };
   }
 };
 

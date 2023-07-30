@@ -1,19 +1,11 @@
 import React from 'react';
 import styles from '@/styles/User.module.css';
 import { BaseLayout } from '@/components/common';
-import {
-  Activity,
-  // ExploreFeed,
-  // Post,
-  PostsContainer,
-  UsersSuggestion,
-} from '@/components/Home';
-import ProfileCoverInfo from '@/components/UserProfile/ProfileCoverInfo/ProfileCoverInfo';
-
-import UserDetails from '@/components/UserProfile/UserDetails/UserDetails';
+import { Activity, PostsContainer, UsersSuggestion } from '@/components/Home';
+import { ProfileCoverInfo, UserDetails } from '@/components/UserProfile';
 import { getUserByUsername, getUserPhotos } from '@/lib/unsplash/services';
 import { useFetchUserPhotos } from '@/hooks/photos/useFetchUserPhotos';
-import InfiniteScrollContainer from '@/components/common/InfiniteScrollContainer/InfiniteScrollContainer';
+import { InfiniteScrollContainer } from '@/components/common';
 
 const UserProfile = ({ userData, initialLoadPhotos, username }) => {
   const { photos, fetchNext, hasNextPage, isError, isFetchingNextPage } =
@@ -28,7 +20,7 @@ const UserProfile = ({ userData, initialLoadPhotos, username }) => {
           <ProfileCoverInfo user={userData} />
           <div className={styles.userProfile_info}>
             <div>
-              <UserDetails  user={userData}/>
+              <UserDetails user={userData} />
               <div className={styles.userProfile_collections}>
                 {/* <ExploreFeed /> */}
               </div>
@@ -58,13 +50,13 @@ const UserProfile = ({ userData, initialLoadPhotos, username }) => {
 
 export const getServerSideProps = async (req) => {
   const username = req.query.username;
-  console.log(username)
+  console.log(username);
   let userData;
   let initialLoadPhotos;
   try {
     userData = await getUserByUsername(username);
   } catch (err) {
-    console.log('Fetch User Error ')
+    console.log('Fetch User Error ');
     return {
       notFound: true,
     };
@@ -75,7 +67,7 @@ export const getServerSideProps = async (req) => {
     console.log(err);
     return {
       notFound: true,
-    }
+    };
   }
   return {
     props: {
