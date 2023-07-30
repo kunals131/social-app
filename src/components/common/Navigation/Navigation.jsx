@@ -11,8 +11,15 @@ import {
   HiHome,
   HiOutlineHome,
 } from 'react-icons/hi2';
-const NavigationIcon = ({ icon, activeIcon, isActive }) => {
+import { useRouter } from 'next/router';
+import { currentUserData } from '@/utils/data/static/CurrentUserData';
+import Link from 'next/link';
+const NavigationIcon = ({ icon, activeIcon, href = '/' }) => {
+  const router = useRouter();
+  const isActive = href == router.pathname;
+  
   return (
+    <Link href={href}>
     <div
       className={`${styles.navigation_icon}${
         isActive ? ` ${styles.navigation_icon_active}` : ''
@@ -28,6 +35,7 @@ const NavigationIcon = ({ icon, activeIcon, isActive }) => {
         ></motion.div>
       )}
     </div>
+    </Link>
   );
 };
 
@@ -36,23 +44,23 @@ const Navigation = () => {
     <LayoutGroup id="a">
       <nav className={styles.navigation}>
         <NavigationIcon
-          isActive={true}
+          href="/"
           activeIcon={<HiHome />}
           icon={<HiOutlineHome />}
         />
         <NavigationIcon
-          isActive={false}
           activeIcon={<HiBell />}
           icon={<HiOutlineBell strokeWidth={2} />}
+          href="/notifications"
         />
         <NavigationIcon
-          isActive={false}
           activeIcon={<HiHeart />}
           icon={<HiOutlineHeart strokeWidth={2} />}
+          href="/liked-photos"
         />
         <NavigationIcon
-          isActive={false}
           activeIcon={<HiUser />}
+          href={`/user/${currentUserData.username}`}
           icon={<HiOutlineUser strokeWidth={2} />}
         />
       </nav>
