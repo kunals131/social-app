@@ -71,3 +71,64 @@
   width: 100%;
   background: #282828;
 }
+
+@media screen and (max-width: 768px) {
+  .profileCover_user {
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    bottom: 6rem;
+  }
+  .profileCover_coverImg {
+    height: 180px;
+  }
+  .profileCover_user_info_username {
+    text-align: center;
+  }
+  .profileCover_user_info {
+    padding-top: 0.8rem;
+  }
+  .profileCover_user_img_container {
+    width: 120px;
+    height: 120px;
+  }
+  .profileCover_stats_container_inner {
+    justify-content: center;
+    padding: 1rem 2rem;
+    padding-top: 8rem;
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .profileCover_stats_container_inner {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 7rem;
+  }
+  .profileCover_user_img_container {
+    width: 100px;
+    height: 100px;
+  }
+  .profileCover_user_info_name{
+    font-size: 1.15rem;
+  }
+
+  .profileCover_user_info_username {
+    font-size: 0.8rem;
+  }
+
+  .profileCover_user {
+    bottom: 5rem;
+  }
+
+  .profileCover_coverImg {
+    height: 150px;
+  }
+  
+}

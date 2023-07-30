@@ -3,22 +3,20 @@ import styles from './ProfileCoverIinfo.module.css';
 import UserStats from '../UserStats/UserStats';
 import { CoverPlaceholderURL } from '@/utils/assets';
 import Image from 'next/image';
-const ProfileCoverInfo = ({user}) => {
-  console.log(user)
+const ProfileCoverInfo = ({ user }) => {
+  console.log(user);
   return (
     <div className={styles.profileCover}>
       <div className={styles.profileCover_user}>
         <div className={styles.profileCover_user_img_container}>
           <Image
-          src={user.profile_image.large}
-          fill
-          className={styles.profileCover_user_img}
+            src={user.profile_image.large}
+            fill
+            className={styles.profileCover_user_img}
           />
         </div>
         <div className={styles.profileCover_user_info}>
-          <div className={styles.profileCover_user_info_name}>
-            {user.name}
-          </div>
+          <div className={styles.profileCover_user_info_name}>{user.name}</div>
           <div className={styles.profileCover_user_info_username}>
             @{user.username}
           </div>

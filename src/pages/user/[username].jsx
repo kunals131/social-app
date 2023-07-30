@@ -47,7 +47,7 @@ const UserProfile = ({ userData, initialLoadPhotos, username }) => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.userProfile_additionals}>
           <Activity />
           <UsersSuggestion />
         </div>

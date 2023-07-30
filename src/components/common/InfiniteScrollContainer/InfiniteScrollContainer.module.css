@@ -8,3 +8,10 @@
   font-weight: bold;
   padding: 4rem 0;
 }
+
+@media screen and (max-width:768px) {
+  .loaderContainer {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+  }
+}
