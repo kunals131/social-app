@@ -98,7 +98,7 @@
   }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:450px) {
   .header_left_logo_img {
     width: 35px;
     height: 35px;
@@ -108,8 +108,8 @@
   }
   .header {
     padding: 1rem;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
     padding-bottom: 0.5rem;
   }
 }
