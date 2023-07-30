@@ -88,6 +88,9 @@
   .profileCover_user_info_username {
     text-align: center;
   }
+  .profileCover_user_info_name {
+    text-align: center;
+  }
   .profileCover_user_info {
     padding-top: 0.8rem;
   }

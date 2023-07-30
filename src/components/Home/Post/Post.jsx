@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BsThreeDots } from 'react-icons/bs';
 import {
   HiOutlineBookmark,
@@ -10,13 +10,15 @@ import styles from './Post.module.css';
 import Image from 'next/image';
 import TextTruncateExpand from '@/components/common/TextTruncateExpand';
 import { useRouter } from 'next/router';
+import { AiOutlineExpand } from 'react-icons/ai';
+import { BsArrowsAngleContract } from 'react-icons/bs';
 const Img1 =
   'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80';
 const Img2 =
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80';
 const Img3 =
   'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80';
-const LikeCount = ({count}) => {
+const LikeCount = ({ count }) => {
   return (
     <div className={styles.post_likes}>
       <div className="flex-align-center">
@@ -40,7 +42,7 @@ const LikeCount = ({count}) => {
         ></div>
       </div>
       <div className={styles.post_likes_text}>
-        Liked by 
+        Liked by
         <span style={{ fontWeight: 600 }}> {count} people</span>
       </div>
     </div>
@@ -59,6 +61,7 @@ const Post = ({
   blurHash,
   // isLiked,
 }) => {
+  const [isFullImage, setIsFullImage] = useState(false);
   const router = useRouter();
   return (
     <div className={styles.post}>
@@ -72,7 +75,10 @@ const Post = ({
               className={styles.post_header_user_img}
             />
           </div>
-          <div onClick={()=>router.push(`/user/${user.username}`)} className={styles.post_header_user_creds}>
+          <div
+            onClick={() => router.push(`/user/${user.username}`)}
+            className={styles.post_header_user_creds}
+          >
             <div className={styles.post_header_user_name}>{user.name}</div>
             <div className={styles.post_header_user_location}>
               @{user.username}
@@ -82,12 +88,24 @@ const Post = ({
         <BsThreeDots className={styles.post_header_menuIcon} size={20} />
       </div>
       <div className={styles.post_img_container}>
+        {isFullImage ? (
+          <BsArrowsAngleContract
+            onClick={() => setIsFullImage(false)}
+            className={styles.post_img_container_expandIcon}
+          />
+        ) : (
+          <AiOutlineExpand
+            onClick={() => setIsFullImage(true)}
+            className={styles.post_img_container_expandIcon}
+          />
+        )}
         <Image
           alt={alt_description || 'post_image'}
           src={urls.regular}
           fill={true}
           className={styles.post_img}
           placeholder="blur"
+          style={{ objectFit: isFullImage ? 'contain' : 'cover' }}
           blurDataURL={blurHash}
         />
       </div>
@@ -113,7 +131,11 @@ const Post = ({
       <LikeCount count={likes} />
       <div className={styles.post_text}>
         {user.username}{' '}
-        <TextTruncateExpand style={{fontWeight : 100, cursor: 'pointer'}} maxLength={50} text={(description ? description : alt_description)}/>
+        <TextTruncateExpand
+          style={{ fontWeight: 100, cursor: 'pointer' }}
+          maxLength={50}
+          text={description ? description : alt_description}
+        />
       </div>
     </div>
   );

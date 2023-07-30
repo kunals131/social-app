@@ -49,7 +49,7 @@ const Home = ({
             isError={isError}
             isFetching={isFetchingNextPage}
           >
-            <div style={styles.home_center_posts}>
+            <div className={styles.home_center_posts}>
             <PostsContainer photos={photos} />
             </div>
           </InfiniteScrollContainer>
