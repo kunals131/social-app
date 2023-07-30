@@ -1,17 +1,21 @@
 :root {
   --logo-font: 'Logo', 'Big Shoulders Inline Text', cursive;
   --primary-font: 'Manrope', sans-serif;
-
   --primary-color: #5367ff;
   --primary-color-low-opacity: rgba(83, 103, 255, 0.05);
   --secondary-color: '#00ffc4';
-
   --primary-background: #1a1a1a;
-  --primary-text: #ffff;
-  --elevation-2: #282828;
-  --elevation-1: #222222;
-  --elevation-2c: #2f2e2e;
-
+  --bg-elevation-1: #282828;
+  --bg-elevation-1c: #282828;
+  --bg-elevation-2: #2f2e2e;
+  --primary-text-color: #ffff;
+  --header-bg-color: #1a1a1a;
+  --action-icons-color: #9ca3af;
+  --header-divider-color: rgba(255, 255, 255, 0.195);
+  --header-padding: 1.8rem 3rem;
+  --header-marginBottom: 0.8rem;
+  --navigation-border-color: #ffffff23
+  
   /* Screen sizes */
   --screen-xs: 420px;
   --screen-sm: 576px;
@@ -21,11 +25,12 @@
   --screen-2xl: 1500px;
   --screen-3xl: 1700px;
   --screen-4xl: 2000px;
-
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
+    --primary-background: #f3f4f6;
+    --primary-text: #1f2937;
   }
 }
 
@@ -41,7 +46,7 @@ body {
   overflow-x: hidden;
   font-family: var(--primary-font);
   background-color: var(--primary-background);
-  color: var(--primary-text);
+  color: var(--primary-text-color);
 }
 
 a {
@@ -80,7 +85,6 @@ a {
 
   scrollbar-width: none; /* Firefox */
 }
-
 
 .page-contents {
   max-width: 1500px;

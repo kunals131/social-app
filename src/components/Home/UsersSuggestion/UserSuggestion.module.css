@@ -2,7 +2,7 @@
   padding: 1rem;
   border-radius: 0.75rem;
   width: 100%;
-  background: #282828;
+  background: var(--bg-elevation-1);
 }
 
 .user_suggestions_header {

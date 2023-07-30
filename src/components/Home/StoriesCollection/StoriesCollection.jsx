@@ -18,7 +18,7 @@ const StoryElement = ({ seen, firstName, profileImage }) => {
         ></div>
       </div>
       <div
-        style={{ color: !seen ? '#fcfcfc' : '#c4c4c4' }}
+        style={{ color: !seen ? 'var(--primary-text-color)' : '#c4c4c4' }}
         className={styles.storyElement_name}
       >
         {firstName}

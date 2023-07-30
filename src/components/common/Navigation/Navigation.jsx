@@ -37,23 +37,23 @@ const Navigation = () => {
       <nav className={styles.navigation}>
         <NavigationIcon
           isActive={true}
-          activeIcon={<HiHome  />}
-          icon={<HiOutlineHome  />}
+          activeIcon={<HiHome />}
+          icon={<HiOutlineHome />}
         />
         <NavigationIcon
           isActive={false}
-          activeIcon={<HiBell  />}
-          icon={<HiOutlineBell strokeWidth={2}  />}
+          activeIcon={<HiBell />}
+          icon={<HiOutlineBell strokeWidth={2} />}
         />
         <NavigationIcon
           isActive={false}
-          activeIcon={<HiHeart  />}
-          icon={<HiOutlineHeart strokeWidth={2}  />}
+          activeIcon={<HiHeart />}
+          icon={<HiOutlineHeart strokeWidth={2} />}
         />
         <NavigationIcon
           isActive={false}
-          activeIcon={<HiUser  />}
-          icon={<HiOutlineUser strokeWidth={2}  />}
+          activeIcon={<HiUser />}
+          icon={<HiOutlineUser strokeWidth={2} />}
         />
       </nav>
     </LayoutGroup>

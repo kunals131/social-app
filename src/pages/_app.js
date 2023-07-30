@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import NProgress from 'nprogress';
+
 export default function App({ Component, pageProps }) {
   const [queryClient] = useState(() => new QueryClient());
   const router = useRouter();
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
       router.events.off('routeChangeError', handleStop);
     };
   }, [router]);
+
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -30,8 +32,8 @@ export default function App({ Component, pageProps }) {
           initial="false"
           onExitComplete={() => window.scrollTo(0, 0)}
         >
-          <div className='page-contents'>
-          <Component {...pageProps} />
+          <div className="page-contents">
+            <Component {...pageProps} />
           </div>
         </AnimatePresence>
       </QueryClientProvider>

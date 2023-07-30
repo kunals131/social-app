@@ -5,7 +5,7 @@
   padding-bottom: 1rem;
   border-radius: 0.75rem;
   width: 100%;
-  background: #282828;
+  background: var(--bg-elevation-1);
   margin-bottom: 1rem;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .activity_item_info_message span {
-  color: white;
+  color: var(--primary-text-color);
   font-weight: bold;
 }
 

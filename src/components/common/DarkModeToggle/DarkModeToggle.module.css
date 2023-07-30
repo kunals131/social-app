@@ -1,0 +1,17 @@
+.toggle_button {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: #fbbf24;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .toggle_button {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding-bottom: 0.3rem;
+    color: #fbbf24;
+  }
+}

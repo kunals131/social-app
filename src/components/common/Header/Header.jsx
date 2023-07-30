@@ -4,11 +4,12 @@ import Image from 'next/image';
 import { LogoWEBP } from '@/utils/assets';
 import Navigation from '../Navigation/Navigation';
 
-import ProfileSwitcher from '../ProfileSwitcher/ProfileSwitcher';
+
 import Link from 'next/link';
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} header-primary`}>
       <div className={styles.header_left}>
         <div className={styles.header_left_logo}>
           <Link href={'/'}>
@@ -28,7 +29,7 @@ const Header = () => {
         <Navigation />
       </div>
       <div className={styles.header_right}>
-        <ProfileSwitcher />
+        <DarkModeToggle/>
       </div>
     </div>
   );

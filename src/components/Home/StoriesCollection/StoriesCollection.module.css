@@ -2,7 +2,7 @@
   padding: 1rem;
   border-radius: 0.75rem;
   width: 100%;
-  background: #282828;
+  background: var(--bg-elevation-1);
 }
 
 .storiesCollection_container {
@@ -67,6 +67,7 @@
   text-overflow: ellipsis; /* Truncate the text with an ellipsis */
   text-align: center;
   line-height: 1.25rem;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -74,8 +75,9 @@
     background-color: transparent;
     padding: 0;
     padding-bottom: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.195);
+    border-bottom: 1px solid var(--header-divider-color);
     border-radius: 8px;
+    
   }
 
   .storyElement_container {

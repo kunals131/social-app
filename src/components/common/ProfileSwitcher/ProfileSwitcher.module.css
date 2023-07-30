@@ -8,11 +8,12 @@
   gap: 32px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  background-color: var(--elevation-1);
+  background-color: var(--bg-elevation-1c);
+  
 }
 
 .profile_switcher:hover {
-  background-color: var(--elevation-2);
+  background-color: var(--bg-elevation-2);
 }
 
 .profile_switcher:hover .profile_switcher_info_img img {
@@ -70,10 +71,9 @@
   .profile_switcher_info_img img {
     border-radius: 50%;
   }
-
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   .profile_switcher_info_img {
     width: 35px;
     height: 35px;

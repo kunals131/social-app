@@ -5,7 +5,7 @@
   padding-bottom: 1rem;
   border-radius: 1rem;
   width: 100%;
-  background: #282828;
+  background: var(--bg-elevation-1);
 }
 
 .post_header {
@@ -46,7 +46,7 @@
 .post_header_user_location {
   font-size: 0.75rem;
   line-height: 1rem;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .post_header_menuIcon {
@@ -91,7 +91,7 @@
   margin-top: 1rem;
   justify-content: space-between;
   align-items: center;
-  color: #9ca3af;
+  color: var(--action-icons-color);
 }
 
 .post_user_name {
@@ -123,7 +123,7 @@
 
 .post_likes_img {
   border-radius: 9999px;
-  border-color: #ffffff;
+  border-color: var(--primary-text-color);
   background-color: #d1d5db;
   width: 28px;
   height: 28px;
@@ -144,7 +144,7 @@
 }
 
 .post_action_icon:hover {
-  color: #ffffff;
+  color: var(--primary-text-color);
   scale: 1.02;
 }
 

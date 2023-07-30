@@ -1,10 +1,12 @@
 .header {
-  padding: 1.8rem 3rem;
+  padding: var(--header-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1500px;
   margin: 0 auto;
+  margin-bottom: var(--header-marginBottom);
+  background-color: var(--header-bg-color);
 }
 
 .header_left_logoText {
@@ -30,7 +32,7 @@
 }
 
 .header_left_search input {
-  background-color: var(--elevation-1);
+  background-color: var(--bg-elevation-1c);
   outline: none;
   appearance: none;
   border-radius: 12px;
@@ -59,7 +61,8 @@
 
 @media (max-width: 1500px) {
   .header {
-    padding: 1.8rem 2.1rem;
+    padding-left:2.1rem;
+    padding-right:2.1rem;
   }
 }
 
@@ -72,6 +75,8 @@
 @media screen and (max-width:768px) {
   .header {
   padding-bottom: 1rem;
+  margin-bottom: 0;
+  background-color: transparent;
 
   }
   .header_left_search {

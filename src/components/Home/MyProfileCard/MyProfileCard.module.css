@@ -1,6 +1,6 @@
 .profileCard {
   border-radius: 1.5rem;
-  background-color: var(--elevation-2);
+  background-color: var(--bg-elevation-1);
 }
 
 .profileCard_cover {
@@ -133,8 +133,8 @@
   border-radius: 0.7rem;
   text-align: center;
   border: none;
-  background-color: #2f2e2e;
-  color: white;
+  background-color: var(--bg-elevation-2);
+  color: var(--primary-text-color);
   cursor: pointer;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
