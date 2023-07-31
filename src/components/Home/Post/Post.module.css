@@ -34,6 +34,7 @@
 .post_header_user_img {
   border-radius: 9999px;
   width: 100%;
+  transition: all 0.05s ease-in-out;
   height: 100%;
   object-fit: cover;
 }
@@ -67,7 +68,6 @@
   cursor: pointer;
   z-index: 3;
   font-size: 1.2rem;
-  
 }
 
 .post_img {
@@ -151,8 +151,13 @@
 .post_header_user_creds {
   cursor: pointer;
 }
-.post_header_user_creds:hover .post_header_user_name {
+.post_header_user:hover .post_header_user_name {
   text-decoration: underline;
+}
+
+.post_header_user:hover .post_header_user_img {
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

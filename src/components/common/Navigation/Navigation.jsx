@@ -14,9 +14,11 @@ import {
 import { useRouter } from 'next/router';
 import { currentUserData } from '@/utils/data/static/CurrentUserData';
 import Link from 'next/link';
+import { Routes } from '@/utils/data/Routes';
 const NavigationIcon = ({ icon, activeIcon, href = '/' }) => {
   const router = useRouter();
-  const isActive = href == router.pathname;
+  let isActive = href == router.pathname;
+  if (!isActive && router?.asPath) isActive = href == router.asPath;
   
   return (
     <Link href={href}>
@@ -44,23 +46,23 @@ const Navigation = () => {
     <LayoutGroup id="a">
       <nav className={styles.navigation}>
         <NavigationIcon
-          href="/"
+          href={Routes.HOME}
           activeIcon={<HiHome />}
           icon={<HiOutlineHome />}
         />
         <NavigationIcon
           activeIcon={<HiBell />}
           icon={<HiOutlineBell strokeWidth={2} />}
-          href="/notifications"
+          href={Routes.NOTIFICATIONS}
         />
         <NavigationIcon
           activeIcon={<HiHeart />}
           icon={<HiOutlineHeart strokeWidth={2} />}
-          href="/liked-photos"
+          href={Routes.LIKED_PHOTOS}
         />
         <NavigationIcon
           activeIcon={<HiUser />}
-          href={`/user/${currentUserData.username}`}
+          href={Routes.USER_PROFILE(currentUserData.username)}
           icon={<HiOutlineUser strokeWidth={2} />}
         />
       </nav>

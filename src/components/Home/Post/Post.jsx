@@ -6,21 +6,24 @@ import {
   HiOutlineHeart,
   HiOutlinePaperAirplane,
 } from 'react-icons/hi2';
-import styles from './Post.module.css';
-import Image from 'next/image';
-import TextTruncateExpand from '@/components/common/TextTruncateExpand';
-import { useRouter } from 'next/router';
 import { AiOutlineExpand } from 'react-icons/ai';
 import { BsArrowsAngleContract } from 'react-icons/bs';
+import Link from 'next/link';
+import Image from 'next/image';
+import TextTruncateExpand from '@/components/common/TextTruncateExpand';
 import { RandomUserImages } from '@/utils/assets';
+import { Routes } from '@/utils/data/Routes';
 
+import styles from './Post.module.css';
 
 const LikeCount = ({ count }) => {
   return (
     <div className={styles.post_likes}>
       <div className="flex-align-center">
         <div
-          style={{ background: `url(${RandomUserImages[1]}) center center/cover` }}
+          style={{
+            background: `url(${RandomUserImages[1]}) center center/cover`,
+          }}
           className={styles.post_likes_img}
         ></div>
         <div
@@ -59,30 +62,28 @@ const Post = ({
   // isLiked,
 }) => {
   const [isFullImage, setIsFullImage] = useState(false);
-  const router = useRouter();
 
   return (
     <div className={styles.post}>
       <div className={styles.post_header}>
-        <div className={styles.post_header_user}>
-          <div className={styles.post_header_user_img_container}>
-            <Image
-              src={user.profile_image.medium}
-              alt={user.name}
-              fill
-              className={styles.post_header_user_img}
-            />
-          </div>
-          <div
-            onClick={() => router.push(`/user/${user.username}`)}
-            className={styles.post_header_user_creds}
-          >
-            <div className={styles.post_header_user_name}>{user.name}</div>
-            <div className={styles.post_header_user_location}>
-              @{user.username}
+        <Link href={Routes.USER_PROFILE(user.username)}>
+          <div className={styles.post_header_user}>
+            <div className={styles.post_header_user_img_container}>
+              <Image
+                src={user.profile_image.medium}
+                alt={user.name}
+                fill
+                className={styles.post_header_user_img}
+              />
+            </div>
+            <div className={styles.post_header_user_creds}>
+              <div className={styles.post_header_user_name}>{user.name}</div>
+              <div className={styles.post_header_user_location}>
+                @{user.username}
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
         <BsThreeDots className={styles.post_header_menuIcon} size={20} />
       </div>
       <div className={styles.post_img_container}>

@@ -1,11 +1,10 @@
+import { UNSPLASH_ACCESS_KEY } from '@/utils/data/constants';
 import axios from 'axios';
-
-const access_key = process.env.NEXT_PUBLIC_UNSPLASH_ACCESS_KEY || '';
 
 export const unsplash = axios.create({
   baseURL: 'https://api.unsplash.com/',
   headers: {
-    Authorization: `Client-ID ${access_key}`,
+    Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
   },
 });
 

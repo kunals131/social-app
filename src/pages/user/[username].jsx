@@ -48,6 +48,7 @@ const UserProfile = ({ userData, initialLoadPhotos, username }) => {
   );
 };
 
+//Server Side Rendering
 export const getServerSideProps = async (req) => {
   const username = req.query.username;
   let userData;

@@ -1,4 +1,5 @@
 import { getRandomPhotos } from '@/lib/unsplash/services';
+import { INFINITE_SCROLL_LIMIT } from '@/utils/data/constants';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 
@@ -15,7 +16,7 @@ export const useFetchRandomPhotos = ({ initialData = [] }) => {
   } = useInfiniteQuery(['photos'], getRandomPhotos, {
     enabled: isActive,
     getNextPageParam: (/*lastPage, pages*/) => {
-      if (currentPage > 5) return undefined;
+      if (currentPage > INFINITE_SCROLL_LIMIT) return undefined;
       return currentPage;
     },
     onSuccess: () => {

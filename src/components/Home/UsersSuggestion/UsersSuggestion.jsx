@@ -4,11 +4,12 @@ import { HiOutlineUserPlus } from 'react-icons/hi2';
 import { UsersPlaceholderData } from '@/utils/data/static/UsersPlaceholderData';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Routes } from '@/utils/data/Routes';
 
 const UserCard = ({ profileImage, name, username }) => {
   return (
     <div className={styles.user_suggestions_card}>
-      <Link href={`/user/${username}`}>
+      <Link href={Routes.USER_PROFILE(username)}>
         <div className={styles.user_suggestions_card_info}>
           <div className={styles.user_suggestions_card_info_img_container}>
             <Image
