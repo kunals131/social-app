@@ -15,7 +15,7 @@ const UserDetails = ({ user }) => {
         <BsThreeDots></BsThreeDots>
       </div>
       <div className={styles.user_details_bio}>
-        <TextTruncateExpand maxLength={100} text={user.bio} />
+        <TextTruncateExpand maxLength={100} text={user.bio || 'Amazing user of unsplash!'} />
       </div>
       <div className={styles.user_details_container}>
         <UserDetailItem

@@ -7,11 +7,13 @@ export const unsplash = axios.create({
   headers: {
     Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
   },
+  
 });
 
 unsplash.interceptors.response.use(
   (response) => response,
   (error) => {
+    console.log(error);
     let errMessage = parseErrorMessage(error);
     if (errMessage?.includes('Rate Limit Exceeded')) {
       if (typeof window !== 'undefined') {
