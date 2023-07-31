@@ -1,64 +1,76 @@
 .not_found_page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 100;
-    height: 80vh;
-    padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+  height: 80vh;
+  padding: 1rem;
 }
 
 .not_found_page_image_container {
-    width: 400px;
-    height: 280px;
-    margin-bottom: 2px;
-    position: relative;
+  width: 400px;
+  height: 280px;
+  margin-bottom: 2px;
+  position: relative;
 }
 
 .not_found_page_image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .not_found_page_title {
-    margin: 0 auto;
-    margin-top: 1.2rem;
-    font-size: 1.4rem;
-    text-align: center;
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.not_found_page_sub_title {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .not_found_page_action_button {
-    margin-top: 1rem;
-    padding: 0.7rem 1.5rem;
-    cursor: pointer;
-    background-color: var(--bg-elevation-1);
-    border: none;
-    border-radius: 5px;
-    color: var(--primary-text-color);
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  background-color: var(--bg-elevation-1);
+  border: none;
+  border-radius: 5px;
+  color: var(--primary-text-color);
 }
 
-@media screen and (max-width:800px) {
-    .not_found_page_title {
-        font-size: 1rem;
-    }
-    .not_found_page_image_container {
-        width: 300px;
-        height: 200px;
-    }
+@media screen and (max-width: 800px) {
+  .not_found_page_title {
+    font-size: 1rem;
+  }
+  .not_found_page_sub_title {
+    font-size: 0.8rem;
+  }
+  .not_found_page_image_container {
+    width: 300px;
+    height: 200px;
+  }
 }
 
-@media screen and (max-width:600px) {
-    .not_found_page_title {
-        font-size: 0.8rem;
-    }
-    .not_found_page_image_container {
-        width: 280px;
-        height: 160px;
-    }
-    .not_found_page_action_button {
-        padding: 0.5rem 1.2rem;
-        font-size: 0.765rem;
-
-    }
+@media screen and (max-width: 600px) {
+  .not_found_page_title {
+    font-size: 0.8rem;
+  }
+  .not_found_page_sub_title {
+    font-size: 0.7rem;
+  }
+  .not_found_page_image_container {
+    width: 280px;
+    height: 160px;
+  }
+  .not_found_page_action_button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.765rem;
+  }
 }

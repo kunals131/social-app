@@ -1,5 +1,6 @@
 import { UNSPLASH_ACCESS_KEY } from '@/utils/data/constants';
 import axios from 'axios';
+import { parseErrorMessage } from './utils';
 
 export const unsplash = axios.create({
   baseURL: 'https://api.unsplash.com/',
@@ -11,8 +12,8 @@ export const unsplash = axios.create({
 unsplash.interceptors.response.use(
   (response) => response,
   (error) => {
-    const { data } = error.response;
-    if (typeof data == 'string' && data.includes('Rate Limit Exceeded')) {
+    let errMessage = parseErrorMessage(error);
+    if (errMessage?.includes('Rate Limit Exceeded')) {
       if (typeof window !== 'undefined') {
         window.location.href = '/error';
       }

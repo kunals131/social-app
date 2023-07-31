@@ -18,6 +18,7 @@ import { useFetchRandomPhotos } from '@/hooks/photos/useFetchRandomPhotos';
 import { InfiniteScrollContainer } from '@/components/common';
 import { useFetchColections } from '@/hooks/collections/useFetchCollections';
 import { useFetchTopics } from '@/hooks/topics/useFetchTopics';
+import { parseErrorMessage } from '@/lib/unsplash/utils';
 
 const Home = ({
   initialLoadPhotos,
@@ -77,10 +78,11 @@ export const getServerSideProps = async () => {
       },
     };
   } catch (err) {
-    console.log(err?.response?.data, 'Home Page Error');
+    console.log(err?.response, 'Home Page Error');
+    let errMessage = parseErrorMessage(err);
     return {
       redirect: {
-        destination: err?.response?.data.includes('Rate Limit Exceeded')
+        destination: errMessage?.includes('Rate Limit Exceeded')
           ? '/error'
           : '/500',
         permanent: false,

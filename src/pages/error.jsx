@@ -2,6 +2,8 @@ import React from 'react';
 import styles from '@/styles/not-found.module.css';
 import Image from 'next/image';
 import { LimitExeededSVG } from '@/utils/assets';
+import Link from 'next/link';
+import { Routes } from '@/utils/data/Routes';
 
 
 const ErrorPage = () => {
@@ -19,7 +21,7 @@ const ErrorPage = () => {
         Looks like you have exceeded the rate limit.
       </div>
       <button className={styles.not_found_page_action_button}>
-        Try after some time!
+      <Link href={Routes.HOME}> Try after some time! </Link>
       </button>
     </div>
   );

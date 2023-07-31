@@ -6,6 +6,7 @@ import { ProfileCoverInfo, UserDetails } from '@/components/UserProfile';
 import { getUserByUsername, getUserPhotos } from '@/lib/unsplash/services';
 import { useFetchUserPhotos } from '@/hooks/photos/useFetchUserPhotos';
 import { InfiniteScrollContainer } from '@/components/common';
+import { parseErrorMessage } from '@/lib/unsplash/utils';
 
 const UserProfile = ({ userData, initialLoadPhotos, username }) => {
   const { photos, fetchNext, hasNextPage, isError, isFetchingNextPage } =
@@ -65,7 +66,8 @@ export const getServerSideProps = async (req) => {
     };
   } catch (err) {
     if (err.status === 404) return { notFound: true };
-    if (err.reponse.data.includes('Rate Limit Exceeded'))
+    let errMessage = parseErrorMessage(err);
+    if (errMessage?.includes('Rate Limit Exceeded'))
       return {
         redirect: {
           destination: '/error',

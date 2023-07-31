@@ -15,5 +15,5 @@
 <ul>
 <li>If you change the window size in device emulation, make sure to refresh the page.</li>
 <li>the live url might show limit exeeded (as unsplash only supports 50 requests per hour.) please use local site with your own access key</li>
-<li>I have limited the infinite scroll to 10 requests. (Could be updated easily)</li>
+<li>I have limited the infinite scroll to 10 requests. (could be updated from env)</li>
 </ul>
