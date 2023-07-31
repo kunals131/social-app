@@ -67,6 +67,11 @@ export const getServerSideProps = async (req) => {
   } catch (err) {
     if (err.status === 404) return { notFound: true };
     let errMessage = parseErrorMessage(err);
+    if (errMessage.includes("Couldn't find User")) {
+      return {
+        notFound : true
+      }
+    }
     if (errMessage?.includes('Rate Limit Exceeded'))
       return {
         redirect: {
