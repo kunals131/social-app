@@ -1,6 +1,6 @@
 <h1 align="center">Social Seedlings</h1>
 <h3 align="center">Groww Assignment 🌟</h3>
-<p align="center"><a href="https://social-seedlings-groww.vercel.app/">social-seedlings-groww.vercel.app</a></h3>
+<p align="center"><a href="https://social-seedlings-groww-web.vercel.app/">social-seedlings-groww-web.vercel.app</a></h3>
 <hr/>
 <h2>Local Setup</h2>
 <ul>
