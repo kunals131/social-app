@@ -16,7 +16,8 @@ const InfiniteScrollContainer = ({
     if (isInView && hasMore) {
       fetchMore();
     }
-  }, [isInView, fetchMore,hasMore]);
+    /* eslint-disable-next-line */
+  }, [isInView]);
 
   return (
     <>
